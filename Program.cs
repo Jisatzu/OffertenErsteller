@@ -12,8 +12,8 @@ namespace OffertenErsteller
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
         /// 
-        public static Form1 form;
-        public static TabellenManipulation Tm;
+        public static Form1 form; //only 1 form is needed currently (01.02.2021)
+        public static TabellenManipulation Tm; //only 1 TabellenManipulation is needed currently (01.02.2021)
         [STAThread]
         static void Main()
         {

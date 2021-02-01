@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * This Class is for Styling all Containers in this Project
+ */
 namespace OffertenErsteller
 {
     public static class ContainerStyle

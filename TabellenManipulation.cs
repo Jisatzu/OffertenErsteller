@@ -10,12 +10,16 @@ namespace OffertenErsteller
     public class TabellenManipulation : TableLayoutPanel
     {
         
-        private string[] ColumnNames;
-        private string[] ColumnTypes;
-        private TableLayoutPanel ManipulatedTabel;
-        private int ColumnAmount;
-        private int RowNumber = 0;
-        bool firstTime = true;
+        private string[] ColumnNames; //saves all column base names
+        private string[] ColumnTypes; //saves all column types from interactalbe rows
+        private TableLayoutPanel ManipulatedTabel; //creates a new tabel to be filled and returned
+        private int ColumnAmount; 
+        private int RowNumber = 0; 
+        bool firstTime = true; //currently checks if it has any amounts of rows, might get removed later
+
+        /*
+         * 
+         */
         public TableLayoutPanel FillRow(TableLayoutPanel tabelLayoutPanel)
         {
             ManipulatedTabel = tabelLayoutPanel;
@@ -30,6 +34,10 @@ namespace OffertenErsteller
             CreateContainers();
             return ManipulatedTabel;
         }
+
+        /*
+         * fills the ColumnNames with all column names available
+         */
         private void ColumnNamesGetter()
         {
             
@@ -47,6 +55,10 @@ namespace OffertenErsteller
                 }
             }
         }
+
+        /*
+         * fills the ColumnTypes with all column types available
+         */
         private void ColumnTypeGetter()
         {
             ColumnTypes = new string[ColumnAmount];
@@ -55,9 +67,14 @@ namespace OffertenErsteller
                 ColumnTypes[i] = ManipulatedTabel.GetControlFromPosition(i, 1).GetType().ToString().Substring(21);
             }
         }
+
+        /*
+         * Creates the containers that will be filled into the new row
+         */
         private void CreateContainers()
         {
             if (firstTime)
+            // creates the containers for the first time
             {
                 int banana = 0;
                 foreach (string item in ColumnNames)
@@ -96,6 +113,8 @@ namespace OffertenErsteller
             }
             else {
                 for (int i = 0; i < ColumnAmount; i++)
+                    //Copys all Containers from the first row into the new row
+                    //depending on container name
                 {
                     switch (ManipulatedTabel.GetControlFromPosition(i, 1).GetType().ToString().Substring(21))
                     {
@@ -118,6 +137,10 @@ namespace OffertenErsteller
                 } 
             }
         }
+
+        /*
+         * Creates the Label Containers for the Row
+         */
         private void CreateLabelForTabel(Label label,string name,int collumPos)
         {
             label = ContainerStyle.StyleLabel(label);
@@ -128,6 +151,10 @@ namespace OffertenErsteller
             }
             ManipulatedTabel.Controls.Add(label, collumPos, RowNumber);
         }
+
+        /*
+         * Creates the ComboBox Containers for the Row
+         */
         private void CreateComboBoxForTabel(ComboBox comboBox, string name, int collumPos)
         {
             comboBox = ContainerStyle.StyleComboBox(comboBox);
@@ -135,6 +162,10 @@ namespace OffertenErsteller
             ManipulatedTabel.Controls.Add(comboBox, collumPos, RowNumber);
             comboBox.SelectedIndexChanged += Program.form.DropDownItem_SelectetIndexChanged;
         }
+
+        /*
+         * Creates the TextBox Containers for the Row
+         */
         private void CreateTextBoxForTabel(TextBox textBox, string name, int collumPos)
         {
             textBox = ContainerStyle.StyleTextBox(textBox);

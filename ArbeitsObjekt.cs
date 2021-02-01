@@ -8,7 +8,11 @@ namespace OffertenErsteller
 {
     public class ArbeitsObjektList
     {
-        public static ArbeitsObjekt[] ArbeitsObjekte { get; } = new ArbeitsObjekt[30];
+        public static ArbeitsObjekt[] ArbeitsObjekte { get; } = new ArbeitsObjekt[30]; // List for all Objects from preisListe.txt
+        
+        /*
+         * Fills ArbeitsObjecte with all Names from the preisListe.txt
+         */
         public static void FileReading()
         {
             string line;
@@ -34,9 +38,6 @@ namespace OffertenErsteller
                         case 2:
                             _typ = something[a];
                             break;
-                        case 3:
-                            System.Console.WriteLine("3 Typ erwartet??");
-                            break;
                         default:
                             System.Console.WriteLine("Fehler");
                             break;
@@ -46,6 +47,10 @@ namespace OffertenErsteller
             }
         }
     }
+    
+    /*
+     * This class is needed to create an object from the preisListe.txt
+     */
     public class ArbeitsObjekt
     {
         private readonly String _name;
