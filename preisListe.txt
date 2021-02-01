@@ -1,0 +1,3 @@
+dota;50.00;stk;
+lol;0.50;stk;
+Bananen;5.00;h;

@@ -1,0 +1,10 @@
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\obj\Debug\OffertenErsteller.Properties.Resources.resources
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\obj\Debug\OffertenErsteller.csproj.GenerateResource.cache
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\obj\Debug\OffertenErsteller.csproj.CoreCompileInputs.cache
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\bin\Debug\OffertenErsteller.exe.config
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\bin\Debug\OffertenErsteller.exe
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\bin\Debug\OffertenErsteller.pdb
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\obj\Debug\OffertenErsteller.exe
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\obj\Debug\OffertenErsteller.pdb
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\obj\Debug\OffertenErsteller.Form1.resources
+C:\Users\xdbat\source\repos\OffertenErsteller\OffertenErsteller\obj\Debug\OffertenErsteller.csprojAssemblyReference.cache
