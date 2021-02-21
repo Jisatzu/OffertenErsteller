@@ -70,7 +70,6 @@ namespace OffertenErsteller
             int column = KostenTabelle.ColumnCount;
             Label preis = new Label();
             Label anzahl = new Label();
-            Label kosten = new Label();
             switch (sender.GetType().ToString().Substring(21)) //sets the sender according to the changed Input
             {
                 case "ComboBox":
@@ -135,6 +134,11 @@ namespace OffertenErsteller
                 }
             }
             KostenRechner(sender, e);
+        }
+        public void ReiheEntfernen_MouseKlick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Program.Tm.RemoveRowFromTabel(KostenTabelle.GetRow(btn), KostenTabelle);
         }
     }
 }
